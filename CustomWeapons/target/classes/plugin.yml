@@ -1,0 +1,8 @@
+name: CustomWeapons
+version: '1.0-SNAPSHOT'
+main: com.lupino.customweapons.CustomWeapons
+api-version: '1.20'
+commands:
+  giveweapons:
+    description: gives player with op all custom weapons
+    permission: op

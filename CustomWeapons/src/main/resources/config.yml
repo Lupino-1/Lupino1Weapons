@@ -1,0 +1,199 @@
+EnableMana: true
+  #Mana je něco jako náboj pro jednotlivé zbraně.Pokud false mana bude ignorována
+  #Recept na manu znázornění pozíc v craftingu.
+# 1 2 3
+# 4 5 6
+# 7 8 9
+#Pokud není nic zadané na dané pozici,v craftingu nic nebude.
+Manarecipe:
+  1: "GOLD_INGOT"
+  2: "CRYING_OBSIDIAN"
+  3: "GOLD_INGOT"
+  4: "DIAMOND"
+  5: "IRON_INGOT"
+  6: "DIAMOND"
+  7: "GOLD_INGOT"
+  8: "CRYING_OBSIDIAN"
+  9: "GOLD_INGOT"
+
+#Povolení zbrani v jednotlivých světech.
+EnableWeaponsInEnd: false
+EnableWeaponsInOverworld: true
+EnableWeaponsInNether: false
+
+#Safezona je místo, kde neúčinkují zbraně, mužete ji vytvořit v každém světě jednu, loc1 je jeden roh a loc 2 je druhý roh, x y z jsou cordy daného rohu.
+#Pokud se svět jmenuje jinak, tak je potřeba dát k world u loc1 i loc2 jméno světa
+Safezone:
+#Dva rohy v overworldu
+  Overworld:
+    loc1:
+      ==: org.bukkit.Location
+      world: world
+      x: -304
+      y: 125
+      z: -733
+    loc2:
+      ==: org.bukkit.Location
+      world: world
+      x: -234
+      y: 75
+      z: -803
+#Dva rohy v netheru
+  Nether:
+    loc1:
+      ==: org.bukkit.Location
+      world: world_nether
+      x: 0
+      y: 0
+      z: 0
+    loc2:
+      ==: org.bukkit.Location
+      world: world_nether
+      x: 0
+      y: 0
+      z: 0
+#Dva rohy v endu
+  End:
+    loc1:
+      ==: org.bukkit.Location
+      world: world_the_end
+      x: 0
+      y: 0
+      z: 0
+    loc2:
+      ==: org.bukkit.Location
+      world: world_the_end
+      x: 0
+      y: 0
+      z: 0
+
+
+
+
+
+#Nastavení týkající se toho jestli zapnout zbraně v cpvp
+EnableWeaponsInCPVP: true
+#Dva rohy v owerworldu, kde bude normal pvp, bude použité pouze pokud bude u enableweaponsincpvp false. Pro rohy platí ty samé pravidla jako u safezone. Safezona muže být uvnitř Normal pvp a stejně bude fungovat.
+Normalpvp:
+  loc1:
+    ==: org.bukkit.Location
+    world: world
+    x: -304
+    y: 125
+    z: -733
+  loc2:
+    ==: org.bukkit.Location
+    world: world
+    x: -234
+    y: 75
+    z: -803
+
+
+
+#Jednotlivé zbraně a věci, které k nim jdou nastavit.
+#Většina číšel které jsou zde zadané ode mně budou nastaveny jako výchozí pokud se sem nic nezadá.
+#Cooldown a Duration je vždy v sekundách.
+#Radiusy jsou vždy v blocích.
+#Damage a Healy jsou v hp.
+
+
+Shadowdagger:
+  Cooldown: 60
+  #Maxdistance je,to jak daleko se muže hráč naportovat, pokud je Maxdistance 60, tak se hráč muže portovat dokud mu bud neskončí cooldown nebo dokud součet vzdáleností všech portu je 60 a víc blocků.
+  Maxdistance: 60
+  #Enable znamená jestli je zbraň povolena, pokud by se zdála moc op, muže byt jednoduše vypnuta.
+  Enable: true
+
+
+
+Vampireblade:
+  Cooldown: 60
+  #Radius je místo kolem hráče kde to působí.
+  Radius: 7
+  #Duration je doba trvaní jednotlivé ability.
+  Duration: 10
+  #Damageandheal je damege, který to ubere každou sekundu hráčum v radiusu a také to přidá za každého hráče tomu kdo aktivoval ten damage.
+  Damageandheal: 2
+  Enable: true
+
+
+
+Flamingaxe:
+  Cooldown: 60
+  #Smallerradius je menši okruh kolem hráče, kde hráč dostane větši damage a větši knockback. Nebude však fungovat přes dosah radiusu.
+  Smallerradius: 6
+  #Smallerradiusdamage je ten damage k smallerradius.
+  Smallerradiusdamage: 15
+  #Radius je celkový radius
+  Radius: 9
+  #Damage je damage, pokud jsi v radiusu, ale nejsi v smallerradiusu.
+  Damage: 10
+  Enable: true
+
+
+
+Coldstaff:
+  Cooldown: 60
+  Radius: 9
+  Duration: 5
+  Enable: true
+
+
+Staffofhealing:
+  Cooldown: 60
+  #Heal je počet životů o kolik se člověk healne.
+  Heal: 20
+  Enable: true
+
+Shieldofeternity:
+  Cooldown: 60
+  Radius: 6
+  Duration: 10
+  Enable: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
