@@ -18,7 +18,7 @@ Configurable Settings:
         Enable or disable specific weapons or adjust abilities for different worlds (Overworld, Nether, End).
         Define Safe Zones where weapons have no effect, and Normal PvP zones where weapon use is restricted based on configuration.
 
-    World-Based Weapon Limitations:
+World-Based Weapon Limitations:
         Set which worlds (Overworld, Nether, End) allow weapon abilities.
         Define specific safe zones in each dimension to prevent ability effects within defined boundaries.
 
