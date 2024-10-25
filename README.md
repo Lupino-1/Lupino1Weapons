@@ -1,7 +1,7 @@
 Custom Weapons Plugin
 
 The Custom Weapons Plugin introduces unique, special weapons for Minecraft that players can obtain through loot crates. Each weapon has a unique ability, activated with an item called Mana, which players must gather through crafting. This plugin is designed to balance pay-to-win mechanics with a grindable resource system, ensuring that players have to work to gather Mana even if they acquire weapons from crates.
-Key Features
+
 
 Special Weapons and Abilities:
 
