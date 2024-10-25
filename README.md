@@ -4,17 +4,17 @@ The Custom Weapons Plugin introduces unique, special weapons for Minecraft that 
 Key Features
 Special Weapons and Abilities:
 
-        Shadow Dagger: Allows players to teleport up to 60 blocks in the direction they are facing. The total distance is cumulative, so players can teleport multiple times until the sum reaches 60 blocks.
+Shadow Dagger: Allows players to teleport up to 60 blocks in the direction they are facing. The total distance is cumulative, so players can teleport multiple times until the sum reaches 60 blocks.
         
-        Vampire Blade: Drains health from nearby players within a 7-block radius, healing the user by 1 heart per affected player every second for 10 seconds.
+Vampire Blade: Drains health from nearby players within a 7-block radius, healing the user by 1 heart per affected player every second for 10 seconds.
         
-        Flaming Axe: Creates a shockwave dealing heavy damage (7.5 hearts within 6 blocks) and moderate damage (5 hearts within 9 blocks).
+Flaming Axe: Creates a shockwave dealing heavy damage (7.5 hearts within 6 blocks) and moderate damage (5 hearts within 9 blocks).
         
-        Cold Staff: Freezes players within a 9-block radius for 5 seconds.
+Cold Staff: Freezes players within a 9-block radius for 5 seconds.
         
-        Staff of Healing: Heals the player to full health upon activation.
+Staff of Healing: Heals the player to full health upon activation.
         
-        Shield of Eternity: Knocks back players within a 6-block radius for 10 seconds when active.
+Shield of Eternity: Knocks back players within a 6-block radius for 10 seconds when active.
 
 Mana System:
         Mana is required to activate weapon abilities, consuming one Mana per use. Mana must be crafted, making it a limited resource that adds strategy to ability usage.
