@@ -357,29 +357,24 @@ public void onPlayerInteract(PlayerInteractEvent event){
         for (int i = 0; i < inventory.length; i++) {
             ItemStack item = inventory[i];
 
-            // Kontrola, zda položka není prázdná a je správného typu
             if (item != null && item.getType() == Material.LIGHT_BLUE_DYE) {
                 ItemMeta meta = item.getItemMeta();
 
-                // Kontrola, zda má předmět požadované jméno v persu
                 if (meta != null && meta.getPersistentDataContainer().has(Keys.MANA, PersistentDataType.BOOLEAN) ) {
-                   // player.sendMessage("Odebrání jednoho kusu předmětu");
+                
                     item.setAmount(item.getAmount() - 1);
 
-                    // Pokud už není žádný kus, odstraníme item z inventáře
                     if (item.getAmount() <= 0) {
                         inventory[i] = null;
                     }
 
-                    // Nastavení aktualizovaného inventáře zpět hráči
                     player.getInventory().setContents(inventory);
 
-                    return true; // Předmět byl nalezen a odebrán
+                    return true; 
                 }
             }
         }
-       // player.sendMessage("nic se nenašlo");
-        return false; // Předmět s požadovaným názvem nebyl nalezen
+        return false; 
     }
     private void setCooldown(Player player, HashMap<UUID, Long> cooldowns, int seconds) {
         cooldowns.put(player.getUniqueId(), System.currentTimeMillis() + (seconds * 1000));
@@ -406,7 +401,7 @@ public void onPlayerInteract(PlayerInteractEvent event){
                     return;
                 }
                 spawnParticleSphere(location, radius, particle,10);
-                radius -= 0.1; // Zmenšuje poloměr koule
+                radius -= 0.1;
             }
         }.runTaskTimer( plugin, 0L, 2L); // Každé 2 ticky (0.1s)
     }
@@ -420,7 +415,7 @@ public void onPlayerInteract(PlayerInteractEvent event){
                     return;
                 }
                 spawnParticleSphere(location, radius, particle,10);
-                radius += 0.1; // Zvětšuje poloměr koule
+                radius += 0.1; 
             }
         }.runTaskTimer(plugin, 0L, 2L); // Každé 2 ticky (0.1s)
     }
@@ -440,7 +435,7 @@ public void onPlayerInteract(PlayerInteractEvent event){
         }
     }
     private void spawnParticleCircle(Location center, double radius, Particle particle, double density) {
-        double step = Math.PI / density; // Hustota particlů na kruhu
+        double step = Math.PI / density; 
 
         for (double angle = 0; angle < 2 * Math.PI; angle += step) {
 
@@ -491,16 +486,16 @@ public void onPlayerInteract(PlayerInteractEvent event){
                     return;
                 }
                 spawnParticleCircle(location, radius, particle,density);
-                radius += 0.3; // Zvětšuje poloměr koule
+                radius += 0.3;
             }
         }.runTaskTimer(plugin, 0L, 1L); // Každé 2 ticky (0.1s)
     }
 
     public boolean isInSafeZone(Player player, Location loc1, Location loc2) {
-        // Získání hráčovy pozice
+        
         Location playerLoc = player.getLocation();
 
-        // Zjištění minimálních a maximálních souřadnic pro každou osu (X, Y, Z)
+    
         double minX = Math.min(loc1.getX(), loc2.getX());
         double maxX = Math.max(loc1.getX(), loc2.getX());
 
@@ -510,16 +505,15 @@ public void onPlayerInteract(PlayerInteractEvent event){
         double minZ = Math.min(loc1.getZ(), loc2.getZ());
         double maxZ = Math.max(loc1.getZ(), loc2.getZ());
 
-        // Kontrola, jestli je hráčova pozice mezi těmito hodnotami
         return playerLoc.getX() >= minX && playerLoc.getX() <= maxX &&
                 playerLoc.getY() >= minY && playerLoc.getY() <= maxY &&
                 playerLoc.getZ() >= minZ && playerLoc.getZ() <= maxZ;
     }
     public boolean isNotInCPVP(Player player, Location loc1, Location loc2) {
-        // Získání hráčovy pozice
+      
         Location playerLoc = player.getLocation();
 
-        // Zjištění minimálních a maximálních souřadnic pro každou osu (X, Y, Z)
+     
         double minX = Math.min(loc1.getX(), loc2.getX());
         double maxX = Math.max(loc1.getX(), loc2.getX());
 
@@ -529,7 +523,6 @@ public void onPlayerInteract(PlayerInteractEvent event){
         double minZ = Math.min(loc1.getZ(), loc2.getZ());
         double maxZ = Math.max(loc1.getZ(), loc2.getZ());
 
-        // Kontrola, jestli je hráčova pozice mezi těmito hodnotami
         return playerLoc.getX() >= minX && playerLoc.getX() <= maxX &&
                 playerLoc.getY() >= minY && playerLoc.getY() <= maxY &&
                 playerLoc.getZ() >= minZ && playerLoc.getZ() <= maxZ;
