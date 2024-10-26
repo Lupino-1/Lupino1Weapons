@@ -16,7 +16,7 @@ public class Keys {
     public static NamespacedKey SHIELD_OF_ETERNITY;
 
 
-    // Inicializační metoda, která nastaví všechny NamespacedKey
+
     public static void initialize(Plugin plugin) {
         MANA = new NamespacedKey(plugin, "mana");
         SHADOW_DAGGER = new NamespacedKey(plugin, "shadow_dagger");
